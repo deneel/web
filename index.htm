@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>Sass 和 Compass</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="js/jquery-1-11-1.js"></script>
+	<script src="js/modal.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="js/Bootstrap/button.js"></script>
+
+  </head>
+  <body>
+    <div id="layout" class="container-fluid bam" >
+        <div class="row">
+           <div class="col-md-10">
+           		<div class="row show" id="page-0">
+           			<div class="col-md-2"></div>
+           			<div class="col-md-10">
+           				<div>
+           						<h3><br></h3>
+           						<h1 class="my-font-color my-margin-top text-shadow">Sass and Compass</h1>
+           						<h2 class="my-font-color text-center my-margin-top">----CSS 预处理器</h2>
+           				</div>
+		           </div>
+		          </div>
+           </div>
+        </div>
+        <div class="row hide" id="page-1">
+           	<div class="col-md-1"></div>
+           			<div class="col-md-10">
+           				<div class="my-font-color">
+      							<h5><br></h5>
+           						<h2 class="text-center">为什么要用CSS预处理器</h2>
+           						<h3>----响应式网页设计的需求</h3>
+           						<p class="content">CSS是一种描术性语言,为适应不同终端及不同大小屏幕的显示需求，必须为各种屏幕写CSS；而CSS预处理器可以让你避免这种重复性的劳动。
+           						</p>
+           						<h3>----浏览器的多样性及不兼容性</h3>
+           						<h3>----能够适合不同的开发人员</h3>
+           						<p class="content">语法简单，设计人员易学；编程方式，更贴近程序开发人员。</p>
+           				</div>
+		           </div>	           
+		    </div>
+           		<div class="row hide my-border-green" id="page-2">
+           			<div class="col-md-1"></div>
+           			<div class="col-md-10">
+           				<div class="my-font-color">
+           						<h2 class="text-center">CSS预处理器</h2>
+           						<h3>----SASS/LESS/STYLUS</h3>
+           						<p class="content-s">SASS，2007年诞生，最早也是最成熟的CSS预处理器，拥有ruby社区的支持和compass这一最强大的css框架，目前受LESS影响，已经进化到了全面兼容CSS的SCSS。
+           						</p>
+           						<p class="content-s">LESS，2009年出现，受SASS的影响较大，但又使用CSS的语法，让大部分开发者和设计师更容易上手，在ruby社区之外支持者远超过SASS，其缺点是比起SASS来，可编程功能不够，不过优点是简单和兼容CSS，反过来也影响了SASS演变到了SCSS的时代。</p>
+           						<p class="content-s">STYLUS，2010年产生，来自NodeJs社区，主要用来给Node项目进行CSS预处理支持，在此社区之内有一定支持者，在广泛的意义上人气还完全不如SASS和LESS。</p>
+           				</div>
+		           </div>	           
+		        </div>
+		        <div class="row hide" id="page-3">
+           			<div class="col-md-1"></div>
+           			<div class="col-md-10">
+           				<div class="my-font-color">
+      							<h3><br></h3>
+           						<h2 class="text-center">Sass 和 Compass 的关系</h2>
+           						<h3>Compass是Sass的工具库</h3>
+           						<p class="content">Compass在SASS的基础上，封装了一系列有用的模块和模板，补充Sass的功能。它们之间的关系，类似jQuery和jQuery UI关系。
+           						</p>
+           						<h3>Compass是Sass的超集</h3>
+           						<p class="content">安装了Compass后，可以直接在Compass下工作。</p>
+           				</div>
+		           </div>	           
+		        </div> 
+            <div class="row hide" id="page-4">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="my-font-color">
+                    <h5><br></h5>
+                      <h2 class="text-center">Sass 和 Compass 的特性</h2>
+                      <h3>----需要Ruby的支持，但不需懂Ruby</h3>
+                      
+                      <h3>----所有的CSS都是当然的Sass</h3>
+                      <p class="content">提供了对底层
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">CSS框架</button>的广泛选择性。
+                      </p>
+                      <h3>----自动Encoding</h3>
+                      <p class="content">通过命令sass watch/compass watch,可以自动将.scss 文件 Encoding 成 .css文件。</p>
+                      <h3>----有四种输出方式</h3>
+                      <p class="content">expanded or nested or compact or compressed</p>
+                  </div>
+               </div>            
+            </div>        
+            <div class="row hide" id="page-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="my-font-color">
+                    <h4><br></h4>
+                      <h2 class="text-center">Sass 和 Compass 的特性</h2>
+                      <h3><a href="code.htm" target="_blank">----引入了变量（$varible）</a></h3>
+                      <h3>----对CSS进行的扩展</h3>
+                      <p class="content"><a href="code.htm#nesting" target="_blank">1、嵌套（Nested Rules 和 Nested Properties）</a></p>
+                      <p class="content"><a href="code.htm#nesting" target="_blank">2、父元素的引用（&）</a></p>
+                      <p class="content"><a href="code.htm#Placehold" target="_blank">3、占位符Placehold（%）</a></p>
+                      <h3><a href="code.htm#Extend" target="_blank">----继承 @Extend</a></h3>
+                      <h3><a href="code.htm#Mixin" target="_blank">----混入Mixin函数</a></h3>
+                  </div>
+               </div>            
+            </div>        
+            <div class="row hide" id="page-6">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="my-font-color">
+                    <h5><br></h5>
+                      <h2 class="text-center">Sass 和 Compass 的特性</h2>
+                      <h3>----引进了条件控制和循环</h3>
+                      <p class="content"><a href="code.htm#ifelse" target="_blank">@if,@if...@elseif..,@for,@each,@while</a></p>                        
+                      <h3>----函数</h3>
+                      <p class="content">涵盖了颜色，字符串，数学，列表，MAP， etc</p>
+                      <p class="content">(http://sass-lang.com/documentation/Sass/Script/Functions.html)</p>
+                      <h3>----导入功能(@import)</h3>
+                      <h3>----Compass image sprites</h3>
+                  </div>
+               </div>            
+            </div>
+            <div class="row hide" id="page-7">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="my-font-color">
+                    <h5><br></h5>
+                      <h2 class="text-center">Compass对Sass的扩展</h2>
+                      <h3>----CSS3 Mixin函数</h3>
+                      <p class="content">如：Border Radius,Box Shadow,Text Shadow,Transform,etc</p>                        
+                      <h3>----Typography Mixin函数</h3>
+                      <p class="content">如：Links,Lists,Text,Vertical Rhythm</p>
+                      <h3>----Utilities Mixin函数</h3>
+                      <p class="content">如：Links,Lists,Text,Color,General,Tables</p>
+                      <h3>----Layout和Reset(自选)</h3>
+                  </div>
+               </div>            
+            </div>
+            <div class="row hide" id="page-8">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                  <div class="my-font-color">
+                    <h5><br></h5>
+                      <h2 class="text-center">Sass+Compass+BootStrap</h2>
+                      <h3>----安装BootStrap</h3>
+                      <p class="content">gem install bootstrap-sass</p>                        
+                      <h3>----创建网站</h3>
+                      <p class="content-s">compass create my-project -r bootstrap-sass --using bootstrap</p>
+                      <p class="content-s">styles.scss - 主文件</p>
+                      <p class="content-s">_bootstrap-variables.scss - Bootstrap 所有变量.</p>
+
+                      <h3>----修改配置文件config.rb</h3>
+                      <p class="content">require 'bootstrap-sass'</p>
+                  </div>
+               </div>            
+            </div>
+    </div>
+ 
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">CSS框架</h4>
+      </div>
+      <div class="modal-body">
+      	<iframe id="myframe" src="cssframes.htm" frameborder="0" scrolling=no width="100%" height="400em"></iframe>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation"  style="border:1px solid green">
+	  <div class="container-fluid">
+	  	<div class="row">
+	    <ul class="pagination pull-right"  style="border:1px solid green;">
+		  <li id="li-0" onclick="pageShift(this);"><a href="#">&laquo;</a></li>
+		  <li id="li-1" onclick="pageShift(this);"><a href="#">1</a></li>
+		  <li id="li-2" onclick="pageShift(this);"><a href="#">2</a></li>
+		  <li id="li-3" onclick="pageShift(this);"><a href="#">3</a></li>
+		  <li id="li-4" onclick="pageShift(this);"><a href="#">4</a></li>
+		  <li id="li-5" onclick="pageShift(this);"><a href="#">5</a></li>
+      <li id="li-6" onclick="pageShift(this);"><a href="#">6</a></li>
+      <li id="li-7" onclick="pageShift(this);"><a href="#">7</a></li>
+		  <li id="li-8" onclick="pageShift(this);"><a href="#">&raquo;</a></li>
+		</ul>
+		</div>
+	  </div>
+	</nav>      
+    <script type="text/JavaScript">
+
+   (function(){
+    	var h=window.innerHeight;
+    	var el=document.getElementById("layout");
+    	el.style.height=h+"px";
+
+    })();
+    $(window).resize(function() {
+      /*var h=window.innerHeight;
+      var el=document.getElementById("layout");
+      el.style.height=h+"px";*/
+      $('body').addClass('bam');
+      //debugger;
+    });
+    
+    function pageShift(el){
+    	var i,j;
+    	j=parseInt(el.id.split("-")[1]);
+    	for (var i=0;i<9;i++){
+    		if(i===j){
+    			$("#page"+"-" +i)[0].className="row show";
+    		}else{
+    			$("#page"+"-" +i)[0].className="row hide";
+    		}
+    	}						    	
+
+    	//debugger;    	
+    }
+    </script>
+  </body>
+</html>	

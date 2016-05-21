@@ -1,0 +1,122 @@
+/*$color1:#FF0000;//red
+$color2:#FFBF00;//orange
+$color3:#FFFF00;//yellow
+$color4:#7FFF00;//green
+$color5:#007FFF;//light blue
+$color6:#00FFFF;//cyan
+$color7:#0000FF;//blue
+$color8:#7F00FF;//purple
+$color9:#FF00FF;//magenta
+$color10:#000;//black*/
+$color-shadow:#0000FF;
+$color11:#FFF;//white
+p.content{
+  @extend h4;
+  text-indent: 2em;
+  line-height: $font-size-h4*1.2;
+}
+p.content-s{
+  font-size:$font-size-h4*0.9;
+  text-indent: 2em;
+  line-height: $font-size-h4*1.1;
+}
+.my-font-color{
+	color:$color11;
+}
+.box-shadow-example div {
+   background: #eeeeee;
+ }
+ 
+// Default single box shadow
+.box-shadow-default {
+ // @include single-box-shadow;
+ @include box-shadow(#000 2px 2px 10px);
+}
+ 
+// Box shadow with custom settings
+.box-shadow-custom {
+  @include box-shadow(red 2px 2px 10px);
+}
+ 
+.box-shadow-custom-multiple {
+  @include box-shadow(rgba(blue, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
+}
+.opacity-20 {
+  @include opacity(0.2);
+}
+.noopacity {
+  @include opaque;
+}
+.bam {
+  @include background(
+    image-url("bs-docs-masthead-pattern.png"),
+    linear-gradient(top, #05c, #090),
+    radial-gradient(#c00, #fff 100px)
+  );
+}
+.my-border-red{
+	border:1px solid red;
+}
+.my-border-green{
+	border:1px solid green;
+}
+.my-margin-top{
+	margin-top:100px;
+}
+a {
+  color:#fff;
+  &.invert,&.invert:hover{
+    color:#000;
+  }
+}
+a:hover{
+  color:#fff;
+}
+%seam{                      
+clear: both;
+display: block;
+/*height: 0px;*/
+border-top: 1px solid rgba(#000, .12);
+border-bottom: 1px solid rgba(#fff, .15);
+}
+hr {
+  @extend %seam;  
+}
+// triangle
+@mixin triangle($direction, $size, $borderColor ) {
+  content:"";
+  height: 0;
+  width: 0;
+
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;} 
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;} 
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;} 
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;}
+}
+.triangle-bott{
+
+  &::before{
+   @include triangle(bottom,1em,#0f0);}
+}
+.triangle-top{
+  &::before{
+  @include triangle(top,1em,#0f0);}
+}
+.text-shadow {
+  @include text-shadow(rgba($color-shadow, 0.2) 3px 3px 0, rgba($color-shadow, 0.2) 5px 5px 0, rgba($color-shadow, 0.2) 5px 5px 0);
+}
+//@import "img / *.png";
+//@include all-img;
+//@include bg-variant('.bg-primary_0', 50%)

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Code Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <style>
+		pre {
+			font-size:30px;
+			font-weight: bold;
+		}
+
+    </style>
+</head>
+<body style="font-size:6em;">
+<table class="table">
+<thead><th width="50%">Scss</th><th>Css</th></thead>
+<tbody>
+<tr  id="varible">
+<td>
+<pre>
+$green: #11c909; $red:#ff0b13; 
+$blue:#091fff;
+.color-me-good {//变量
+	color:$green;
+}						
+</pre>
+</td>
+<td>
+<pre>
+
+.color-me-good 
+{
+	color:#11c909;
+}
+</pre>
+</td>	
+</tr>
+<tr id="nesting">
+<td>
+<pre>
+nav {//嵌套和引用符
+	a {
+	  color: $red;
+	  &:hover {
+	    color: $green;
+	  }
+	  &:visited {
+	    color: $blue;
+	  }
+	}
+}		
+</pre>
+</td>
+<td>
+<pre>
+nav a {
+	color: #ff0b13;
+}
+nav a:hover {
+	color: #11c909;
+}
+nav a:visited {
+	color: #091fff;
+}
+
+
+</pre>
+</td>	
+</tr>
+<tr id="nesting2">
+<td>
+<pre>
+.funky {
+  font: {
+    family: fantasy;
+    size: 30em;
+    weight: bold;}
+}
+</pre>
+</td>
+<td>
+<pre>
+.funky {
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold; 
+}
+
+</pre>
+</td>	
+</tr>
+
+
+<tr  id="Placehold">
+<td>
+<pre>
+//占位符
+%seam{                      
+clear: both;
+display: block;
+height: 0px;
+border-top: 1px solid rgba(#000, .12);
+border-bottom: 1px solid rgba(#fff, .15);
+}
+hr {
+  @extend %seam;  
+}	
+</pre>
+</td>
+<td  style="background-color:#0ff;">
+<pre>
+hr { 
+   clear: both; 
+   display: block; 
+   height: 0px; 
+   border-top: 
+   1px solid rgba(0, 0, 0, 0.12); 
+   border-bottom: 1px solid 
+   rgba(255, 255, 255, 0.15); 
+}
+</pre>
+<hr />
+<hr />
+<hr />
+</td>	
+</tr>
+
+<tr  id="Extend">
+<td>
+
+<pre>
+.error {//继承
+  border: 1px #f00;
+  background-color: #fdd;
+}
+.attention {
+  font-size: 3em;
+  background-color: #ff0;
+}
+.seriousError {
+  @extend .error;
+  @extend .attention;
+  border-width: 3px;
+}
+</pre>
+</td>
+<td>
+<pre>
+.error, .seriousError {
+  border: 1px #f00;
+  background-color: #fdd; 
+}
+
+.attention, .seriousError {
+  font-size: 3em;
+  background-color: #ff0; 
+}
+
+.seriousError {
+  border-width: 3px; 
+}
+</pre>
+</td>	
+</tr>
+
+<tr  id="Mixin">
+<td>
+<pre>
+@mixin border-radius($radius)
+{
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+.box { @include border-radius(10px);}		
+</pre>
+</td>
+<td>
+<pre>
+  
+.box 
+{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+</pre>
+</td>	
+</tr>
+
+<tr  id="ifelse">
+<td>
+<pre>
+@mixin triangle($direction,$size,$borderColor)
+{
+  content:"";
+  height: 0;
+  width: 0;
+
+  @if $direction == top {
+    border-bottom:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;} 
+  @else if $direction == right {
+    border-left:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;} 
+  @else if $direction == bottom {
+    border-top:$size solid $borderColor;
+    border-left:$size dashed transparent;
+    border-right:$size dashed transparent;} 
+  @else if $direction == left {
+    border-right:$size solid $borderColor;
+    border-top:$size dashed transparent;
+    border-bottom:$size dashed transparent;}
+}
+.triangle-bott{
+  &::before{
+  @include triangle(bottom,1em,#0f0);}
+}
+.triangle-top{
+  &::before{
+  @include triangle(top,1em,#0f0);}
+}
+</pre>
+</td>
+<td>
+<pre>
+.triangle::before { 
+content: ""; 
+height: 0; 
+width: 0; 
+border-bottom: 1em solid lime;
+border-left: 1em dashed transparent; 
+border-right: 1em dashed transparent; 
+}
+</pre>
+<hr />
+<p></p>
+<div style="margin-top:2em;"><sapn class="triangle-bott"></sapn><span class="triangle-top"></span><span class="triangle-bott"></span><span class="triangle-top"></span></div>
+</td>	
+</tr>
+</tbody>
+</table>
+<hr />
+</body>
+</html>
