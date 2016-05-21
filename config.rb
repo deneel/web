@@ -26,3 +26,4 @@ relative_assets = true
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 # add one line to test git
 # add another line to test git 
+# the warning infomation will not be display
