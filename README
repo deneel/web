@@ -1,1 +1,7 @@
 TO Test git use this directory!
+git commands:
+git add
+git status
+git commit -m
+git reset HEAD 
+git checkout

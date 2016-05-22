@@ -27,3 +27,4 @@ relative_assets = true
 # add one line to test git
 # add another line to test git 
 # the warning infomation will not be display
+# the git command git commit --amend
