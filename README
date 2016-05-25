@@ -5,3 +5,4 @@ git status
 git commit -m
 git reset HEAD 
 git checkout
+git clone
